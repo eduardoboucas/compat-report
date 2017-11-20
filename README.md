@@ -16,4 +16,4 @@ To install it, clone the repository (or [download the ZIP archive](https://githu
 
 To get a compatibility report, navigate to the page you want to inspect and open the **Compatibility** tab.
 
-<img src=".github/screenshot1.png" width="450">
+![Screenshot of compatibility tab](.github/screenshot1.png)
