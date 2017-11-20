@@ -12,6 +12,8 @@ Compat Report was built using the [WebExtensions](https://developer.mozilla.org/
 
 To install it, clone the repository (or [download the ZIP archive](https://github.com/eduardoboucas/compat-report/archive/master.zip)) and follow the instructions on how to [install a temporary add-on](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox).
 
+Choose the `dist/` sub-directory as the source for the temporary add-on. After this, you should get a new tab in your Developer Tools panel.
+
 ## Usage
 
 To get a compatibility report, navigate to the page you want to inspect and open the **Compatibility** tab.
