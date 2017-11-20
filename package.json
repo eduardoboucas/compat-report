@@ -1,0 +1,27 @@
+{
+  "name": "compat-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "update-data": "rm -rf data && git clone https://github.com/mdn/browser-compat-data.git data && rm -rf data/.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "mdn-browser-compat-data": "0.0.14",
+    "preact": "^8.2.6",
+    "semver-compare": "^1.0.0",
+    "webpack": "^3.8.1"
+  }
+}

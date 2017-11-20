@@ -1,0 +1,156 @@
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.8em;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.panel {
+  display: flex;
+  background-color: white;
+  height: 100vh;
+  padding: 0;
+}
+
+.browsers {
+  display: flex;
+  flex-grow: 1;
+  overflow: scroll;
+  padding: 10px;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.browser {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  max-width: 100px;
+}
+
+.browser__versions {
+  padding: 0;
+}
+
+.browser__name {
+  padding: 0 5px;
+  text-align: center;
+  margin: 0;
+}
+
+.browser__logo {
+  /*display: block;*/
+  display: none;
+  margin: 0 auto;
+  width: 30px;
+}
+
+.browser-version {
+  position: relative;
+  margin: 5px;
+  text-align: center;
+  transition: all 0.2s ease-out;
+}
+
+.browser-version:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.browser-version__button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.severity--1 {
+  background-color: #c5ffc3;
+}
+
+.severity--2 {
+  background-color: #fff3c3;
+}
+
+.severity--3 {
+  background-color: #ffcfc3;
+}
+
+.details-panel {
+  background-color: #F9F9FA;
+  display: flex;
+  width: 200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 0 10px;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.details-panel > * + * {
+  margin-top: 20px;
+}
+
+.details-panel__info {
+  align-self: center;
+  opacity: 0.6;
+  text-align: center;
+  width: 100%;
+}
+
+.issues-table {
+  width: 100%;
+  height: 100%;
+}
+
+.issues-table__table {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.issues-table__key {
+  width: 100%;
+}
+
+.issues-table__value {
+  white-space: nowrap;
+}
+
+.browser-versions {
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
