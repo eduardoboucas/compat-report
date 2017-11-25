@@ -6,22 +6,48 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "update-data": "rm -rf data && git clone https://github.com/mdn/browser-compat-data.git data && rm -rf data/.git"
+    "update-data": "rm -rf data && git clone https://github.com/mdn/browser-compat-data.git data && rm -rf data/.git",
+    "test": "jest && node test/utils/coverage.js",
+    "test-dev": "jest --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "css": "^2.2.1"
+    "postcss": "^6.0.14"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.6.1",
+    "istanbul-cobertura-badger": "^1.3.1",
+    "jest": "^21.2.1",
     "mdn-browser-compat-data": "0.0.14",
     "preact": "^8.2.6",
     "semver-compare": "^1.0.0",
     "webpack": "^3.8.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "src/**/*.jsx"
+    ],
+    "coverageReporters": [
+      "cobertura",
+      "html",
+      "text"
+    ],
+    "testMatch": [
+      "*/**/test/**/*.test.js"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "dist/**/*",
+      "test/**/*",
+      "temp_test/**/*"
+    ]
   }
 }

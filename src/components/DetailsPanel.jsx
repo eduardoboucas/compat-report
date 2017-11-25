@@ -3,7 +3,7 @@ import BrowserVersionsPicker from './BrowserVersionsPicker.jsx'
 import IssuesTable from './IssuesTable.jsx'
 
 class DetailsPanel extends Component {
-  _renderIssuesTable() {
+  _renderIssuesTable () {
     const {
       data,
       issuesMap
@@ -13,7 +13,7 @@ class DetailsPanel extends Component {
       if (data.issues) {
         return (
           <div>
-            <p class="details-panel__header">
+            <p class='details-panel__header'>
               <strong>{data.browser} {data.version}</strong> ({data.issues.length} issues)
             </p>
 
@@ -28,33 +28,33 @@ class DetailsPanel extends Component {
       } else {
         return (
           <div>
-            <p class="details-panel__header">
+            <p class='details-panel__header'>
               <strong>{data.browser} {data.version}</strong>
             </p>
 
-            <p class="details-panel__info">No compatibility issues found</p>
+            <p class='details-panel__info'>No compatibility issues found</p>
           </div>
         )
       }
     } else {
       return (
         <div>
-          <p class="details-panel__info">Click on a version to see a list of compatibility issues</p>
+          <p class='details-panel__info'>Click on a version to see a list of compatibility issues</p>
         </div>
       )
     }
   }
 
-  render() {
+  render () {
     const {
       browserVersions,
       data,
       issuesMap,
-      onSetBrowserVersions,
+      onSetBrowserVersions
     } = this.props
 
     return (
-      <div class="details-panel">
+      <div class='details-panel'>
         {this._renderIssuesTable()}
 
         <BrowserVersionsPicker

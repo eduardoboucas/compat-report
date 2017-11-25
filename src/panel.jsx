@@ -6,7 +6,7 @@ import semverCompare from 'semver-compare'
 import StyleSheet from './StyleSheet'
 
 class Panel extends Component {
-  constructor() {
+  constructor () {
     super()
 
     this.state = {
@@ -19,7 +19,7 @@ class Panel extends Component {
     this.state.browsers = this._buildBrowserList(this.state.browserVersions)
   }
 
-  _buildBrowserList(maxVersions) {
+  _buildBrowserList (maxVersions) {
     return Object.keys(compatData.browsers).reduce((browsers, browser) => {
       browsers[browser] = Object.keys(compatData.browsers[browser].releases)
         .sort(semverCompare)
@@ -30,7 +30,7 @@ class Panel extends Component {
     }, {})
   }
 
-  _expandItem(issues, browser, version) {
+  _expandItem (issues, browser, version) {
     this.setState({
       expandedItem: {
         issues,
@@ -40,7 +40,7 @@ class Panel extends Component {
     })
   }
 
-  _fetchStylesheets() {
+  _fetchStylesheets () {
     const getSyleSheetNodesFn = '(' + this._getCSSNodes.toString() + ')()'
 
     this.setState({
@@ -68,7 +68,7 @@ class Panel extends Component {
         items.forEach(item => {
           stylesheets.add(item.content, item.url)
         })
-        
+
         const processedStylesheets = stylesheets.parse()
 
         this.setState({
@@ -80,7 +80,7 @@ class Panel extends Component {
       })
   }
 
-  _getCSSNodes() {
+  _getCSSNodes () {
     return Array.from(
       document.getElementsByTagName('link')
     ).filter(node => {
@@ -89,21 +89,21 @@ class Panel extends Component {
       return node.getAttribute('href').indexOf('/') === 0
         ? window.location.origin + node.getAttribute('href')
         : node.getAttribute('href')
-    })    
+    })
   }
 
-  _setMaxBrowserVersions(versions) {
+  _setMaxBrowserVersions (versions) {
     this.setState({
       browsers: this._buildBrowserList(versions),
       browserVersions: versions
     })
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this._fetchStylesheets()
   }
 
-  render() {
+  render () {
     const {
       browsers,
       browserVersions,
@@ -123,44 +123,44 @@ class Panel extends Component {
     }
 
     return (
-      <div class="panel">
-        <div class="browsers">
+      <div class='panel'>
+        <div class='browsers'>
           <Browser
             browsers={browsers}
-            handle="chrome"
-            name="Chrome"
+            handle='chrome'
+            name='Chrome'
             onExpand={this._expandItem.bind(this)}
             stylesheets={stylesheets}
           />
 
           <Browser
             browsers={browsers}
-            handle="opera"
-            name="Opera"
+            handle='opera'
+            name='Opera'
             onExpand={this._expandItem.bind(this)}
             stylesheets={stylesheets}
           />
 
           <Browser
             browsers={browsers}
-            handle="firefox"
-            name="Firefox"
+            handle='firefox'
+            name='Firefox'
             onExpand={this._expandItem.bind(this)}
             stylesheets={stylesheets}
           />
 
           <Browser
             browsers={browsers}
-            handle="ie"
-            name="IE"
+            handle='ie'
+            name='IE'
             onExpand={this._expandItem.bind(this)}
             stylesheets={stylesheets}
           />
 
           <Browser
             browsers={browsers}
-            handle="edge"
-            name="Edge"
+            handle='edge'
+            name='Edge'
             onExpand={this._expandItem.bind(this)}
             stylesheets={stylesheets}
           />

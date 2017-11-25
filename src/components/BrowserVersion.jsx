@@ -1,7 +1,7 @@
 import { h, render, Component } from 'preact'
 
 class BrowserVersion extends Component {
-  render() {
+  render () {
     const {
       issues,
       name,
@@ -22,11 +22,11 @@ class BrowserVersion extends Component {
     return (
       <li class={`browser-version severity--${severity}`}>
         <button
-          class="browser-version__button"
+          class='browser-version__button'
           onClick={event => onExpand(issues, name, version)}
         >{version}</button>
       </li>
-    )    
+    )
   }
 }
 

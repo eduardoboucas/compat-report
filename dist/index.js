@@ -3,11 +3,11 @@ This script is run whenever the devtools are open.
 In here, we can create our panel.
 */
 
-function handleShown() {
+function handleShown () {
   console.log('panel is being shown', browser.tabs)
 }
 
-function handleHidden() {
+function handleHidden () {
   console.log('panel is being hidden')
 }
 
@@ -21,4 +21,4 @@ browser.devtools.panels.create(
 ).then((newPanel) => {
   newPanel.onShown.addListener(handleShown)
   newPanel.onHidden.addListener(handleHidden)
-}) 
+})

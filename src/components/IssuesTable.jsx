@@ -1,7 +1,7 @@
 import { h, render, Component } from 'preact'
 
 class IssuesTable extends Component {
-  _openLink(issue) {
+  _openLink (issue) {
     console.log('--> b:', browser.tabs)
     console.log('--> c:', chrome)
     // var creating = chrome.tabs.create({
@@ -9,7 +9,7 @@ class IssuesTable extends Component {
     // })
   }
 
-  _renderIssue(key) {
+  _renderIssue (key) {
     const {
       issuesMap
     } = this.props
@@ -19,7 +19,7 @@ class IssuesTable extends Component {
     }
   }
 
-  render() {
+  render () {
     const {
       browser,
       data,
@@ -34,23 +34,23 @@ class IssuesTable extends Component {
     })
 
     return (
-      <div class="issues-table">
-        <table class="issues-table__table">
+      <div class='issues-table'>
+        <table class='issues-table__table'>
           <tbody>
             {issues.map(issue => (
               <tr>
-                <td class="issues-table__key">
+                <td class='issues-table__key'>
                   <button
                     onClick={this._openLink.bind(this, issue)}
                   >{this._renderIssue(issue)}</button>
                 </td>
-                <td class="issues-table__value">×{issuesMap[issue].occurrences.length}</td>
+                <td class='issues-table__value'>×{issuesMap[issue].occurrences.length}</td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      
+
     )
   }
 }

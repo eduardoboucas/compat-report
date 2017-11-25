@@ -2,7 +2,7 @@ import { h, render, Component } from 'preact'
 import BrowserVersion from './BrowserVersion.jsx'
 
 class Browser extends Component {
-  render() {
+  render () {
     const {
       browsers,
       handle,
@@ -12,11 +12,11 @@ class Browser extends Component {
     } = this.props
 
     return (
-      <div class="browser">
-        <div class="browser__header">
-          <p class="browser__name">{name}</p>
+      <div class='browser'>
+        <div class='browser__header'>
+          <p class='browser__name'>{name}</p>
         </div>
-        <ol class="browser__versions">
+        <ol class='browser__versions'>
           {browsers[handle].map(version => (
             <BrowserVersion
               issues={stylesheets.issues[handle] && stylesheets.issues[handle][version]}

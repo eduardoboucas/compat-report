@@ -1,9 +1,9 @@
 module.exports = {
   entry: './src/panel.jsx',
-  //entry: './src/panel.js',
+  // entry: './src/panel.js',
   output: {
-    path : __dirname + '/dist',
-    filename: 'panel.js',
+    path: __dirname + '/dist',
+    filename: 'panel.js'
   },
   module: {
     loaders: [{

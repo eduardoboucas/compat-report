@@ -1,4 +1,4 @@
-# Compat Report
+# Compat Report [![coverage](https://img.shields.io/badge/coverage-3%2525-red.svg?style=flat?style=flat-square)](https://github.com/eduardoboucas/compat-report) [![Build Status](https://travis-ci.org/eduardoboucas/compat-report.svg?branch=master)](https://travis-ci.org/eduardoboucas/compat-report)
 
 > A DevTools panel for flagging browser compatibility issues
 
