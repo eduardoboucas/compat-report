@@ -1,0 +1,50 @@
+.sidebar {
+  display: flex;
+  width: var(--sidebar-width);
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-direction: column;
+  overflow: scroll;
+  border-left: 1px solid var(--theme-splitter);
+}
+
+.toggable-item {
+  display: flex;
+  padding: 5px 0;
+}
+
+.toggable-item-toggle {
+  margin-right: 10px;
+}
+
+.issue-property {
+  border-bottom: 1px dashed transparent;
+  color: var(--theme-highlight-blue);
+  cursor: pointer;
+  font-family: var(--monospace-font-family);
+  padding-left: 10px;
+  transition: all 0.2s;
+}
+
+.issue-property:hover {
+  border-bottom-color: hsl(0, 0%, 50%);
+}
+
+.issue-instance {
+  font-weight: bold;
+  background-color: #fff3d0;
+  border-radius: 4px;
+  padding: 4px;
+  transition: opacity 0.5s;
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 0.8em;
+  border: 1px solid var(--theme-splitter);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+}
+
+.issue-instance-hidden {
+  opacity: 0;
+}

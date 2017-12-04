@@ -1,0 +1,47 @@
+.browser {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  max-width: 100px;
+}
+
+.browser-name {
+  padding: 0 5px;
+  text-align: center;
+  margin: 0;
+}
+
+.versions {
+  padding: 0;
+}
+
+.version {
+  background-color: #c5ffc3;
+  border: 1px solid var(--theme-splitter);
+  list-style: none;
+  position: relative;
+  margin: 5px;
+  text-align: center;
+  transition: all 0.2s ease-out;
+}
+
+.version-active {
+  border: 1px dashed var(--theme-highlight-blue);
+}
+
+.version-clickable .version-button {
+  cursor: pointer;
+}
+
+.version-clickable:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.version-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+}

@@ -1,0 +1,78 @@
+.button {
+  display: flex;
+  margin: 0 4px -1px 4px;
+  padding: 3px 14px;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px 1px 0 1px;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.button-active {
+  background-color: white;
+  border-color: var(--theme-splitter);
+}
+
+.button:hover {
+  background-color: var(--theme-toolbar-background-alt);
+  border-color: var(--theme-splitter);
+}
+
+.button path {
+  fill: #ccd1d5;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  transition: all 0.15s ease-in-out;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 0;
+  margin-top: 0;
+  display: block;
+  justify-content: center;
+  vertical-align: middle;
+  position: absolute;
+  right: 5px;
+}
+
+.icon svg {
+  width: 8px;
+}
+
+.icon:hover {
+  background: var(--theme-highlight-blue);
+}
+
+.icon:hover path {
+  fill: white;
+}
+
+.button-big {
+  padding: 11px;
+  margin-right: 7px;
+  width: 27px;
+  height: 40px;
+}
+
+.button-big .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.button-big .icon svg {
+  width: 9px;
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.text-closable {
+  margin-right: 10px;
+}

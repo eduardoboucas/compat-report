@@ -1,0 +1,11 @@
+.link {
+  border-bottom: 1px dashed transparent;
+  color: var(--theme-highlight-blue);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+
+.link:hover {
+  border-bottom-color: var(--theme-highlight-blue);
+}

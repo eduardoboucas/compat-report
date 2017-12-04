@@ -1,0 +1,15 @@
+.panel {
+  display: flex;
+  background-color: white;
+  height: 100vh;
+  padding: 0;
+}
+
+.browsers {
+  display: flex;
+  flex-grow: 1;
+  overflow: scroll;
+  padding: 10px;
+  align-items: flex-start;
+  height: 100%;
+}

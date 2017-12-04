@@ -1,0 +1,53 @@
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+.line-container {
+  display: table;
+}
+
+.line {
+  display: table-row;
+  position: relative;
+}
+
+div.line-highlight,
+details.line-highlight summary {
+  background-color: #fff3d0;
+}
+
+details.line-highlight[open] {
+  margin-bottom: 5px;
+}
+
+.line-body {
+  background-color: var(--theme-toolbar-background);
+  border-style: solid;
+  border-color: var(--theme-splitter);
+  border-width: 1px 0;
+  margin: 0;
+  padding: 10px 22px;
+}
+
+.line summary::before {
+  position: absolute;
+  content: '\25B6';
+  cursor: pointer;
+  padding-right: 0.5em;
+  left: 5px;
+}
+
+.line[open] > summary::before {
+  content: '\25BC';
+}
+
+.line pre {
+  margin: 0;
+  padding: 0 22px;
+}
+
+.line summary {
+  display: block;
+}

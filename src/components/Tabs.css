@@ -1,0 +1,17 @@
+.container {
+  flex-grow: 1;
+  width: calc(100vw - var(--sidebar-width));
+}
+
+.nav {
+  background-color: var(--theme-toolbar-background);
+  display: flex;
+  border-bottom: 1px solid var(--theme-splitter);
+  height: var(--header-height);
+  padding: 4px 10px 0 10px;
+}
+
+.content {
+  height: calc(100% - var(--header-height));
+  padding: 10px 0;
+}

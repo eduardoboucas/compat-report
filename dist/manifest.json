@@ -7,14 +7,15 @@
   "homepage_url": "https://github.com/eduardoboucas/compat-report",
   "icons": {
     "48": "logo_48.png",
-    "240": "logo_240.png"
+    "512": "logo_512.png"
   },
   "background": {
-    "scripts": []
+    "scripts": ["browser-polyfill.js", "background.js"]
   },
   "permissions": [
     "<all_urls>",
-    "tabs"
+    "tabs",
+    "webNavigation"
   ],
   "devtools_page": "index.html"
 }

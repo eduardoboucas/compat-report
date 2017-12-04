@@ -1,0 +1,19 @@
+.container {
+  border-bottom: 1px solid var(--theme-splitter);
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+}
+
+.container-toggable {
+  display: flex;
+}
+
+.container:hover {
+  background-color: var(--theme-toolbar-background-hover);
+}
+
+.toggle {
+  margin-right: 10px;
+}

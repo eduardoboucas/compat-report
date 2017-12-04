@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  align-items: center;
+}
+
+.placeholder {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  color: #999999;
+}
