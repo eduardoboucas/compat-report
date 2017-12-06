@@ -10,16 +10,10 @@
 
 .line {
   display: table-row;
-  position: relative;
 }
 
-div.line-highlight,
-details.line-highlight summary {
+.line-highlight {
   background-color: #fff3d0;
-}
-
-details.line-highlight[open] {
-  margin-bottom: 5px;
 }
 
 .line-body {
@@ -27,27 +21,28 @@ details.line-highlight[open] {
   border-style: solid;
   border-color: var(--theme-splitter);
   border-width: 1px 0;
-  margin: 0;
+  margin: 0 0 5px 0;
   padding: 10px 22px;
 }
 
-.line summary::before {
+.line-contents {
+  position: relative;
+}
+
+.line-contents::before {
   position: absolute;
   content: '\25B6';
   cursor: pointer;
   padding-right: 0.5em;
   left: 5px;
+  top: -1px;
 }
 
-.line[open] > summary::before {
+.line-open.line-contents::before {
   content: '\25BC';
 }
 
 .line pre {
   margin: 0;
   padding: 0 22px;
-}
-
-.line summary {
-  display: block;
 }

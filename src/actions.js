@@ -48,8 +48,8 @@ export function fetchStylesheets(activeSources) {
     const getInlineStylesFn = '(' + getInlineStyles.toString() + ')()'
     const stylesheets = new StyleSheet()
 
+    let inlineSources = []
     let failedSources = []
-    let sourcesArray = []
 
     return browser.devtools.inspectedWindow
       .eval(getExternalStylesFn)
@@ -92,7 +92,12 @@ export function fetchStylesheets(activeSources) {
 
         return browser.devtools.inspectedWindow
           .eval(getInlineStylesFn)
-          .then(inlineStylesheets => {
+          .then(response => {
+            // Check is for compatibility with Chrome and Firefox.
+            const inlineStylesheets = Array.isArray(response[0])
+              ? response[0]
+              : response
+
             inlineStylesheets.forEach((content, index) => {
               if (typeof content !== 'string' || content.length === 0) {
                 return
@@ -101,7 +106,7 @@ export function fetchStylesheets(activeSources) {
               const index1 = index + 1
               const isEnabled = !activeSources || activeSources.includes(index1)
 
-              sourcesArray.push({
+              inlineSources.push({
                 enabled: isEnabled,
                 external: false,
                 id: index1
@@ -120,13 +125,13 @@ export function fetchStylesheets(activeSources) {
           }).then(() => {
             return stylesheets.parse()
           }).then(({data, failedSources, stylesheets}) => {
-            sourcesArray = sourcesArray.concat(sources.filter(source => {
+            const sourcesArray = sources.filter(source => {
               return !failedSources.includes(source.url)
             }).map(source => ({
               enabled: !activeSources || activeSources.includes(source.url),
               external: true,
               id: source.url
-            })))
+            })).concat(inlineSources)
 
             dispatch({
               data,

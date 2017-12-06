@@ -39,6 +39,7 @@ class DetailsPanel extends Component {
   _renderCssIssues () {
     const {
       data,
+      sources,
       tabActive,
       tabs
     } = this.props
@@ -68,15 +69,17 @@ class DetailsPanel extends Component {
 
     clearTimeout(this.timeout)
 
-    return Object.keys(issuesByStylesheet).map(stylesheetId => (
+    return sources.filter(source => {
+      return issuesByStylesheet[source.id] !== undefined
+    }).map(source => (
       <Accordion
         onClose={this._handleStylesheetSelect.bind(this, null)}
-        onOpen={this._handleStylesheetSelect.bind(this, stylesheetId)}
-        open={stylesheetId === stylesheet}
+        onOpen={this._handleStylesheetSelect.bind(this, source.id)}
+        open={source.id === stylesheet}
         style='strong'
-        text={stylesheetId}
+        text={source.external ? source.id : `Inline stylesheet #${source.id}`}
       >
-        {Object.keys(issuesByStylesheet[stylesheetId]).map(name => (
+        {Object.keys(issuesByStylesheet[source.id]).map(name => (
           <AccordionItem
             onClick={this._handleIssueSelect.bind(this, name)}
           >

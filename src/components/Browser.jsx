@@ -20,7 +20,7 @@ class Browser extends Component {
       color = '#fff3c3'
     }
 
-    if (numIssues > 8) {
+    if (numIssues > 7) {
       color = '#ffcfc3'
     }
 
