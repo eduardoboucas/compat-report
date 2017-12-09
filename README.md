@@ -16,21 +16,21 @@ The panel is a JavaScript application built with [Preact.js](https://preactjs.co
 
 1. Clone the repository
 
-  ```shell
-  git clone git@github.com:eduardoboucas/compat-report.git
-  ```
+    ```shell
+    git clone git@github.com:eduardoboucas/compat-report.git
+    ```
 
 1. Install the dependencies using [NPM](https://npmjs.com)
 
-  ```shell
-  npm install
-  ```
+    ```shell
+    npm install
+    ```
 
 1. Watch for changes
 
-  ```shell
-  npm run watch
-  ```
+    ```shell
+    npm run watch
+    ```
 
 To run the test suite, run `npm test`.
 
