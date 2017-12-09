@@ -1,6 +1,5 @@
 const TransformProcessor = function () {
   this.transforms = [
-    require('./transforms/animation'),
     require('./transforms/transform-3d')
   ]
 }

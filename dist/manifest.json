@@ -1,8 +1,8 @@
 {
   "description": "Shows a report of browser compatibility issues",
-  "manifest_version": 2,
+  "manifest_version": 1,
   "name": "Compat Report",
-  "version": "1.0",
+  "version": "0.1.0",
   "author": "Eduardo Bouças",
   "homepage_url": "https://github.com/eduardoboucas/compat-report",
   "icons": {
