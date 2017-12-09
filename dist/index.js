@@ -1,5 +1,5 @@
 browser.devtools.panels.create(
   'Compatibility',
-  'icon_48.png',
+  'icon3.png',
   'panel.html'
 )

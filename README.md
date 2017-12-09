@@ -1,6 +1,8 @@
+![Colorful Lego bricks](dist/images/logo_512.png)
+
 # Compat Report
 
-[![coverage](https://img.shields.io/badge/coverage-3%25-red.svg?style=flat?style=flat-square)](https://github.com/eduardoboucas/compat-report) [![Build Status](https://travis-ci.org/eduardoboucas/compat-report.svg?branch=master)](https://travis-ci.org/eduardoboucas/compat-report)
+[![coverage](https://img.shields.io/badge/coverage-14%25-red.svg?style=flat?style=flat-square)](https://github.com/eduardoboucas/compat-report) [![Build Status](https://travis-ci.org/eduardoboucas/compat-report.svg?branch=master)](https://travis-ci.org/eduardoboucas/compat-report)
 
 > A DevTools panel for flagging browser compatibility issues
 
@@ -8,16 +10,26 @@
 
 This extension creates a Developer Tools panel that provides a basic overview of potential browser compatibility issues, using data from [MDN](https://github.com/mdn/browser-compat-data). It's still a proof of concept at the moment, so you'll likely find some glitches in the matrix.
 
-## Installation
+## Development
 
-Compat Report was built using the [WebExtensions](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) standard, so any compatible browser should support it. At this point, it was only tested with **Firefox 57**.
+The panel is a JavaScript application built with [Preact.js](https://preactjs.com/) and [Redux](https://redux.js.org/). To make changes, follow these steps:
 
-To install it, clone the repository (or [download the ZIP archive](https://github.com/eduardoboucas/compat-report/archive/master.zip)) and follow the instructions on how to [install a temporary add-on](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Temporary_Installation_in_Firefox).
+1. Clone the repository
 
-Choose the `dist/` sub-directory as the source for the temporary add-on. After this, you should get a new tab in your Developer Tools panel.
+  ```shell
+  git clone git@github.com:eduardoboucas/compat-report.git
+  ```
 
-## Usage
+1. Install the dependencies using [NPM](https://npmjs.com)
 
-To get a compatibility report, navigate to the page you want to inspect and open the **Compatibility** tab.
+  ```shell
+  npm install
+  ```
 
-![Screenshot of compatibility tab](.github/screenshot1.png)
+1. Watch for changes
+
+  ```shell
+  npm run watch
+  ```
+
+To run the test suite, run `npm test`.

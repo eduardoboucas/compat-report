@@ -40,7 +40,7 @@ class Panel extends Component {
     if (status === 'STATUS_LOADING') {
       return (
         <div class={css.panel}>
-          <Placeholder>Crunching some data...</Placeholder>
+          <Placeholder>Loading...</Placeholder>
         </div>
       )
     }
