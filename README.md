@@ -1,4 +1,4 @@
-![Colorful Lego bricks](dist/images/logo_512.png)
+<img alt="Colorful Lego bricks" src="https://raw.githubusercontent.com/eduardoboucas/compat-report/master/dist/logo_512.png" width="200">
 
 # Compat Report
 
@@ -33,3 +33,8 @@ The panel is a JavaScript application built with [Preact.js](https://preactjs.co
   ```
 
 To run the test suite, run `npm test`.
+
+## Credits
+
+Logo made by [Smashicons](https://www.flaticon.com/authors/smashicons).
+Icon made by [Coucou](https://www.flaticon.com/authors/coucou).
