@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-data": "node pre-build/build-data.js",
-    "build": "webpack",
+    "build": "webpack && mkdir -p archives && cd dist && zip -r ../archives/compat-report.zip *",
     "watch": "webpack --watch",
     "test": "jest && node test/utils/coverage.js",
     "test-dev": "jest --watch"
@@ -27,7 +27,7 @@
     "cssbeautify": "^0.3.1",
     "istanbul-cobertura-badger": "^1.3.1",
     "jest": "^21.2.1",
-    "mdn-browser-compat-data": "latest",
+    "mdn-browser-compat-data": "0.0.16",
     "object-path": "^0.11.4",
     "preact": "^8.2.6",
     "preact-redux": "^2.0.3",

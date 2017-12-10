@@ -1,6 +1,6 @@
 {
   "description": "Shows a report of browser compatibility issues",
-  "manifest_version": 1,
+  "manifest_version": 2,
   "name": "Compat Report",
   "version": "0.1.0",
   "author": "Eduardo Bouças",

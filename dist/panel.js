@@ -14378,7 +14378,7 @@ AtRule.prototype.process = function (issues) {
 
   switch (this.node.name) {
     case 'counter-style':
-      const counterStyleCompat = compatData.css['at-rules']['@counter-style']
+      const counterStyleCompat = compatData.css['at-rules']['counter-style']
 
       atRuleIssues['counter-style'] = counterStyleCompat
 
