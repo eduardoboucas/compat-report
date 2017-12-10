@@ -8,7 +8,14 @@
 
 ## Overview
 
-This extension creates a Developer Tools panel that provides a basic overview of potential browser compatibility issues, using data from [MDN](https://github.com/mdn/browser-compat-data). It's still a proof of concept at the moment, so you'll likely find some glitches in the matrix.
+This extension creates a Developer Tools panel that provides a basic overview of potential browser compatibility issues, using data from [MDN](https://github.com/mdn/browser-compat-data). It's compatible with Mozilla Firefox and Google Chrome.
+
+![Screenshot of Compat Report](.github/screenshot1.png)
+
+## Installation
+
+- Mozilla Firefox: https://addons.mozilla.org/en-US/firefox/addon/compat-report/
+- Google Chrome: *Coming soon*
 
 ## Development
 
