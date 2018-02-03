@@ -35,13 +35,13 @@ Inside `lib/`, the main file is `StyleSheet.js`, a module for parsing and proces
 
 When processing a declaration, the property will be matched against [the list of CSS properties from MDN](https://github.com/mdn/browser-compat-data/tree/master/css/properties). This is a trivial comparison – when we find a property, say `transform`, we look for a `mdn.css.properties.transform` object.
 
-But MDN compat data has the concept of [sub-features](https://github.com/mdn/browser-compat-data/blob/master/compat-data-schema.md#sub-features), a variant of an object that introduces different browser support. In the example of `transform`, this could be 3D transforms.
+But MDN compat data has the concept of [sub-features](https://github.com/mdn/browser-compat-data/blob/master/schemas/compat-data-schema.md#sub-features), a variant of an object that introduces different browser support. In the example of `transform`, this could be 3D transforms.
 
 This is identified by `mdn.css.properties.transform.3d` in MDN, but matching it with a CSS declaration is more complex than a textual comparison, as we need to look for transform functions (`matrix3d`, `rotate3d`, `scale3d` or `translate3d`). We need a set of rules that specify how each sub-feature can be identified in a block of CSS.
 
 We do this with *transforms* (probably not the best name for the concept, but the best I could do). Each transform consists of a JavaScript file that receives a declaration, a rule and a list of MDN compatibility keys (like `transform` and `transform.3d`). The latter can be modified by a transform, which can add a new key to the list to signal a new compatibility problem, or remove existing items from the list if the transform believes that the context of the rule/declaration means that a particular key shouldn't be flagged as a compatibility issue.
 
-To see an example, check the [`transform-3d` transform](tree/master/src/lib/transforms/transform-3d.js) which determines whether a transform function has been used in a declaration, applying the `transform.3d` sub-property if so.
+To see an example, check the [`transform-3d` transform](src/lib/transforms/transform-3d.js) which determines whether a transform function has been used in a declaration, applying the `transform.3d` sub-property if so.
 
 ### Installing
 
