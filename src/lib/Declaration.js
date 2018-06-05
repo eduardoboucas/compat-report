@@ -49,7 +49,7 @@ Declaration.prototype.processCompatPath = function (compatPath, compatPathData, 
   const unprefixedProperty = postcss.vendor.unprefixed(this.node.prop)
   const propertyCompatData = objectPath.get(compatData.css.properties, compatPath)
 
-  if (!propertyCompatData) return
+  if (!propertyCompatData || !propertyCompatData.__compat) return
 
   const propertySuppport = propertyCompatData.__compat.support
 
